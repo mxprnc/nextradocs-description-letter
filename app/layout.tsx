@@ -5,43 +5,43 @@ import { getPageMap } from 'nextra/page-map'
 import 'nextra-theme-docs/style.css'
 
 export const metadata = {
-  title: {
-    default: 'NextraDocs Kubernetes',
-    template: '%s | NextraDocs Kubernetes'
-  },
-  description: 'Kubernetes Technical Documentation'
+    title: {
+        default: 'NextraDocs Description Letter',
+        template: '%s | NextraDocs Description Letter'
+    },
+    description: 'Description Letter Technical Documentation'
 }
 
 const navbar = (
-  <Navbar
-    logo={<b>NextraDocs Kubernetes</b>}
-  />
+    <Navbar
+        logo={<b>NextraDocs Description Letter</b>}
+    />
 )
 
 const footer = (
-  <Footer>
-    MIT {new Date().getFullYear()} © NextraDocs Kubernetes.
-  </Footer>
+    <Footer>
+        MIT {new Date().getFullYear()} © NextraDocs Description Letter.
+    </Footer>
 )
 
 type RootLayoutProps = {
-  children: ReactNode
+    children: ReactNode
 }
 
 export default async function RootLayout({ children }: RootLayoutProps) {
-  return (
-    <html lang="ko" dir="ltr" suppressHydrationWarning>
-      <Head />
+    return (
+        <html lang="ko" dir="ltr" suppressHydrationWarning>
+            <Head />
 
-      <body>
-        <Layout
-          navbar={navbar}
-          pageMap={await getPageMap()}
-          footer={footer}
-        >
-          {children}
-        </Layout>
-      </body>
-    </html>
-  )
+            <body>
+                <Layout
+                    navbar={navbar}
+                    pageMap={await getPageMap()}
+                    footer={footer}
+                >
+                    {children}
+                </Layout>
+            </body>
+        </html>
+    )
 }
